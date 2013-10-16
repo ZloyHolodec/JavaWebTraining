@@ -7,6 +7,11 @@
   <version>1.0-SNAPSHOT</version>
   <name>javaWebTesting Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>
+  	<hibernate.version>4.2.6.Final</hibernate.version>
+  </properties>  
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -19,6 +24,52 @@
     	<artifactId>struts2-core</artifactId>
     	<version>2.3.1.2</version>
     </dependency>
+       
+    <!-- Hibernate -->
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>${hibernate.version}</version>
+    </dependency>
+    <dependency>
+   		<groupId>org.hibernate</groupId>
+   		<artifactId>hibernate-entitymanager</artifactId>
+   		<version>${hibernate.version}</version> 	
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>1.6.1</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>1.2.145</version>
+    </dependency> 
+    <!-- end Hibernate -->  
+    
+   <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.4</version>
+   </dependency>
+  
+   <!-- WEB LIBS --> 
+   <!-- BOOTSTRAP -->
+    <dependency>
+        <groupId>com.jgeppert.struts2.bootstrap</groupId>
+        <artifactId>struts2-bootstrap-plugin</artifactId>
+        <version>1.5.2</version>
+    </dependency>       
+   <!-- END BOOTSTRAP -->
+   <!-- JQUERY -->
+	<dependency>
+		<groupId>com.jgeppert.struts2.jquery</groupId>
+		<artifactId>struts2-jquery-plugin</artifactId>
+		<version>1.8.3</version>
+	</dependency>
+	<!-- END JQUERY -->
+	<!-- END WEB LIBS -->   
   </dependencies>
   <build>
     <finalName>javaWebTesting</finalName>
